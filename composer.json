@@ -1,0 +1,26 @@
+{
+  "name": "iamnotstatic/laravel-api-auth",
+  "description": "Laravel API authentication scaffold",
+  "type": "library",
+  "require": {},
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdul-fatai",
+      "email": "staticdev20046@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Iamnotstatic\\LaravelAPIAuth\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Iamnotstatic\\LaravelAPIAuth\\LaravelAPIAuthServiceProvider"
+      ]
+    }
+  }
+}
