@@ -25,7 +25,7 @@ class LaravelAPIAuthServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__. '/routes/api.php');
         $this->loadViewsFrom(__DIR__. '/view', 'apiauth');
-        $this->loadMigrationsFrom(__DIR__. '/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->mergeConfigFrom(
             __DIR__.'/config/apiauth.php', 'apiauth'
         );

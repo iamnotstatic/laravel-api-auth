@@ -4,6 +4,7 @@ namespace Iamnotstatic\LaravelAPIAuth\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Iamnotstatic\LaravelAPIAuth\Models\User;
 
@@ -30,4 +31,5 @@ class RegisterController extends Controller
         return response()->json(['data' => $user], 201);
 
     }
+
 }

@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 Route::group(['namespace'=>'Iamnotstatic\LaravelAPIAuth\Http\Controllers'], function() {
 
     Route::post('api/register', 'Auth\RegisterController@register')->name('register');
+    Route::post('api/login', 'Auth\LoginController@login')->name('login');
 
 });
 
