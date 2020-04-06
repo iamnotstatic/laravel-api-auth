@@ -19,5 +19,9 @@ Route::group(['namespace'=>'Iamnotstatic\LaravelAPIAuth\Http\Controllers'], func
     Route::post('api/register', 'Auth\RegisterController@register')->name('register');
     Route::post('api/login', 'Auth\LoginController@login')->name('login');
 
+    Route::post('password/create', 'Api\Password\PasswordResetController@create');
+    Route::get('password/find/{token}', 'Api\Password\PasswordResetController@find');
+    Route::post('password/reset', 'Api\Password\PasswordResetController@reset');
+
 });
 
