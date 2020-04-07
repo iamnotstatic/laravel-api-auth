@@ -16,12 +16,16 @@ use Illuminate\Http\Request;
 
 Route::group(['namespace'=>'Iamnotstatic\LaravelAPIAuth\Http\Controllers'], function() {
 
-    Route::post('api/register', 'Auth\RegisterController@register')->name('register');
-    Route::post('api/login', 'Auth\LoginController@login')->name('login');
+    Route::group(['prefix' => 'api'], function() {
+        
+        Route::post('register', 'Auth\RegisterController@register')->name('register');
+        Route::post('login', 'Auth\LoginController@login')->name('login');
 
-    Route::post('password/create', 'Api\Password\PasswordResetController@create');
-    Route::get('password/find/{token}', 'Api\Password\PasswordResetController@find');
-    Route::post('password/reset', 'Api\Password\PasswordResetController@reset');
+        Route::post('password/forgotten', 'Auth\ForgotPasswordController@forgotten');
+        Route::get('password/find/{token}', 'Auth\PasswordResetController@find');
+        Route::post('password/reset', 'Api\Password\PasswordResetController@reset');
 
+    });
+    
 });
 
