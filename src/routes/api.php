@@ -22,8 +22,8 @@ Route::group(['namespace'=>'Iamnotstatic\LaravelAPIAuth\Http\Controllers'], func
         Route::post('login', 'Auth\LoginController@login')->name('login');
 
         Route::post('password/forgotten', 'Auth\ForgotPasswordController@forgotten');
-        Route::get('password/find/{token}', 'Auth\PasswordResetController@find');
-        Route::post('password/reset', 'Api\Password\PasswordResetController@reset');
+        Route::get('password/find/{token}', 'Auth\ResetPasswordController@find');
+        Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
     });
     
