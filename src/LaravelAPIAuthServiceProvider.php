@@ -32,5 +32,9 @@ class LaravelAPIAuthServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/apiauth.php' => config_path('apiauth.php'),
         ]);
+        
+        $this->publishes([
+            __DIR__.'/Http/Controllers/Auth' => app_path('Http/Controllers/Auth'),
+        ]);
     }
 }
