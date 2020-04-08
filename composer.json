@@ -1,13 +1,12 @@
 {
   "name": "iamnotstatic/laravel-api-auth",
   "description": "Laravel API authentication scaffold",
-  "type": "library",
   "require": {},
   "license": "MIT",
   "authors": [
     {
       "name": "Abdul-fatai",
-      "email": "staticdev20046@gmail.com"
+      "email": "abdulfataisuleiman67@gmail.com"
     }
   ],
   "minimum-stability": "dev",
