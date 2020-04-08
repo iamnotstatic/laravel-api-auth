@@ -10,6 +10,17 @@ use Iamnotstatic\LaravelAPIAuth\Models\User;
 
 class RegisterController extends Controller
 {
+    
+    /**
+     * Create user
+     *
+     * @param  [string] name
+     * @param  [string] email
+     * @param  [string] password
+     * @param  [string] password_confirmation
+     * @return [string] message
+     */
+
     public function register(Request $request) 
     {
         $validator = Validator::make($request->all(), [
