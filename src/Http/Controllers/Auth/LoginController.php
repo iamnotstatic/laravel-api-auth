@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller 
 {
-
+    
     /**
      * Login user and create token
      *
@@ -32,12 +32,23 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $user = Auth::user(); 
-            $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken; 
+            $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken;  
             return response()->json(['success' => $success], 200);  
         } else {
             return response()->json(['error' => 'Invalid Credentails'], 401);
         }
     }
+
+    /** 
+     * details api 
+     * 
+     * @return \Illuminate\Http\Response 
+     */ 
+    public function getUser() 
+    { 
+        $user = Auth::user(); 
+        return response()->json(['success' => $user], 200); 
+    } 
 
 
     /**

@@ -21,6 +21,11 @@ Route::group(['namespace'=>'Iamnotstatic\LaravelAPIAuth\Http\Controllers'], func
         Route::post('register', 'Auth\RegisterController@register')->name('register');
         Route::post('login', 'Auth\LoginController@login')->name('login');
 
+        Route::group(['middleware' => 'auth:api'], function() {
+            Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+            Route::get('/getuser', 'Auth\LoginController@getUser')->name('getuser');
+        });
+
         Route::post('password/forgotten', 'Auth\ForgotPasswordController@forgotten');
         Route::get('password/find/{token}', 'Auth\ResetPasswordController@find');
         Route::post('password/reset', 'Auth\ResetPasswordController@reset');
