@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'send_email_to' => "static@gmail.com"
+    "token_key_name" => 'LaravelApiAuth'
 ];

@@ -15,10 +15,8 @@ class LoginController extends Controller
      *
      * @param  [string] email
      * @param  [string] password
-     * @param  [boolean] remember_me
      * @return [string] access_token
      * @return [string] token_type
-     * @return [string] expires_at
      */
     
     public function login (Request $request) 
@@ -33,7 +31,9 @@ class LoginController extends Controller
         }
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return "Cool";
+            $user = Auth::user(); 
+            $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken; 
+            return response()->json(['success' => $success], 200);  
         } else {
             return response()->json(['error' => 'Invalid Credentails'], 401);
         }
