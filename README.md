@@ -11,5 +11,6 @@ A Laravel Package for easy API authentication setup with passport
 
 ## Installation
 
-```composer require iamnotstatic/laravel-api-auth
+```bash
+composer require iamnotstatic/laravel-api-auth
 ```
