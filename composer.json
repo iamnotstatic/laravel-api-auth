@@ -7,7 +7,8 @@
     "oauth"
   ],
   "require": {
-    "laravel/passport": "^8.4"
+    "guzzlehttp/guzzle": "^7.0@dev",
+    "laravel/passport": "^9.0@dev"
   },
   "license": "MIT",
   "authors": [
