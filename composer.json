@@ -1,7 +1,9 @@
 {
   "name": "iamnotstatic/laravel-api-auth",
   "description": "Laravel API authentication scaffold",
-  "require": {},
+  "require": {
+    "laravel/passport": "^8.4"
+  },
   "license": "MIT",
   "authors": [
     {
