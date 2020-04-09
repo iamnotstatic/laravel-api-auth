@@ -8,3 +8,5 @@
 ## Introduction
 
 A Laravel Package for easy API authentication setup with passport
+
+## Installation
