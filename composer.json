@@ -1,6 +1,11 @@
 {
   "name": "iamnotstatic/laravel-api-auth",
-  "description": "Laravel API authentication scaffold",
+  "description": "A Laravel Package for easy API authentication setup with passport",
+  "keywords": [
+    "laravel",
+    "passport",
+    "oauth"
+  ],
   "require": {
     "laravel/passport": "^8.4"
   },
