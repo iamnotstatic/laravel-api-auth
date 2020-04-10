@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $user = Auth::user(); 
-            $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken;  
+            $success['token'] =  $user->createToken('Personal Access Token')-> accessToken;  
             return response()->json([
                 'success' => $success,
                 'token_type' => 'Bearer'

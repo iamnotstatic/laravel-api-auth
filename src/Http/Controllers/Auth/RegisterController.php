@@ -38,7 +38,7 @@ class RegisterController extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->save();
-        $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken; 
+        $success['token'] =  $user->createToken('Personal Access Token')-> accessToken; 
 
         return response()->json([
             'success' => $success,
