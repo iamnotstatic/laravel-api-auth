@@ -40,7 +40,10 @@ class RegisterController extends Controller
         $user->save();
         $success['token'] =  $user->createToken(config('apiauth::token_key_name'))-> accessToken; 
 
-        return response()->json(['success' => $success], 201);
+        return response()->json([
+            'success' => $success,
+            'token_type' => 'Bearer'
+        ], 201);
 
     }
 
