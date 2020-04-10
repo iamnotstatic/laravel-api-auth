@@ -11,7 +11,7 @@
 
 ## Installation
 
-To get the latest version of Laravel Paystack, simply require it
+To get the latest version of Laravel Api Auth, simply require it
 
 ```bash
 composer require iamnotstatic/laravel-api-auth
@@ -126,15 +126,19 @@ Login
 ![login](https://user-images.githubusercontent.com/46509072/78993086-d3ca7c80-7b34-11ea-807f-8bbf7baa00e8.png)
 
 Logout
+
 ![logout](https://user-images.githubusercontent.com/46509072/78993159-f8beef80-7b34-11ea-9f0e-bff2dda268d8.png)
 
 Get User
+
 ![getuser](https://user-images.githubusercontent.com/46509072/78993121-e93fa680-7b34-11ea-98da-6ff837f52b78.png)
 
 Forgotten Password
+
 ![forgottenpass](https://user-images.githubusercontent.com/46509072/78993185-0d02ec80-7b35-11ea-888b-d1ff379170c8.png)
 
 Reset Passowrd
+
 ![passwordreset](https://user-images.githubusercontent.com/46509072/78993214-1e4bf900-7b35-11ea-9c2b-346e1f555b97.png)
 
 ## Contributing
